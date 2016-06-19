@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
+	{% load leaflet_tags %}
 	<head>
 		<meta charset="UTF-8">
 		<title>Map in Django</title>
+		{% leaflet_js %}
+		{% leaflet_css %}
+		<style>
+		    .leaflet-container {
+			    height: 600px;
+		    }
+		</style>
 	</head>
 	<body>
 		<h2>Devices list:</h2>
@@ -14,5 +22,6 @@
 		<hr>
 		{% endfor %}
 		Done
+		{% leaflet_map "yourmap" %}
 	</body>
 </html>

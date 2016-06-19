@@ -49,6 +49,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'map',
+    'leaflet',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,3 +114,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(WSGI_DIR, 'static')
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER' : (-14.49, -54.1),
+    'DEFAULT_ZOOM' : 4,
+    'MINIMAP' : True,
+    'SCALE' : 'metric',
+    'ATTRIBUTION_PREFIX': 'Powered by Django!',
+}

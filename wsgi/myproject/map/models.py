@@ -6,7 +6,7 @@ class Location(models.Model):
     longitude = models.FloatField()
 
     def __unicode__(self):
-        return (u"%s" % self.latitude)
+        return (u"%s %s" % self.latitude, self.longitude)
 
 class Device(models.Model):
     location = models.ForeignKey(Location)
