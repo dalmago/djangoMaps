@@ -118,6 +118,8 @@ STATIC_ROOT = os.path.join(WSGI_DIR, 'static')
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER' : (-14.49, -54.1),
     'DEFAULT_ZOOM' : 4,
+    'MAX_ZOOM' : 20,
+    'MIN_ZOOM' : 2,
     'MINIMAP' : True,
     'SCALE' : 'metric',
     'ATTRIBUTION_PREFIX': 'Powered by Django!',
