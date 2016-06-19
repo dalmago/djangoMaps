@@ -17,15 +17,14 @@
 		{% for dev in devices %}
 		<h4>Nome: {{ dev.name }}</h4>
 		id: {{ dev.devID }}<br>
-		latitude: {{ dev.location.latitude }}<br>
-		longitude: {{ dev.location.longitude }}<br>
+		location: {{ dev.location.name }}<br>
 		<hr>
 		{% endfor %}
 		Done
 		<script type="text/javascript">
 		    function map_init_basic(map, option){
 			    {% for dev in devices %}
-			    L.marker([{{ dev.location.latitude }},{{ dev.location.longitude }}]).addTo(map);
+			    L.marker([{{ dev.location.latitude }},{{ dev.location.longitude }}]).addTo(map).bindPopup("Location: {{ dev.location.name }}<br>Device: {{ dev.name }}<br>ID: {{ dev.devID }}");
 			    {% endfor %}
 		    }
 		</script>
