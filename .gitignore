@@ -7,3 +7,4 @@
 .pydevproject
 venv
 migrations
+db.sqlite3
