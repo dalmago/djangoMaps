@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Map in Django</title>
+	</head>
+	<body>
+		<h2>Devices list:</h2>
+		{% for dev in devices %}
+		<h4>Nome: {{ dev.name }}</h4>
+		id: {{ dev.devID }}<br>
+		latitude: {{ dev.location.latitude }}<br>
+		longitude: {{ dev.location.longitude }}<br>
+		<hr>
+		{% endfor %}
+		Done
+	</body>
+</html>
