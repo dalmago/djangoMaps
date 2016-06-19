@@ -22,6 +22,13 @@
 		<hr>
 		{% endfor %}
 		Done
-		{% leaflet_map "yourmap" %}
+		<script type="text/javascript">
+		    function map_init_basic(map, option){
+			    {% for dev in devices %}
+			    L.marker([{{ dev.location.latitude }},{{ dev.location.longitude }}]).addTo(map);
+			    {% endfor %}
+		    }
+		</script>
+		{% leaflet_map "yourmap" callback="window.map_init_basic" %}
 	</body>
 </html>

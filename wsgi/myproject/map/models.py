@@ -2,11 +2,12 @@ from django.db import models
 
 # Create your models here.
 class Location(models.Model):
+    name = models.CharField(max_length=75)
     latitude = models.FloatField()
     longitude = models.FloatField()
 
-    def __unicode__(self):
-        return (u"%s %s" % self.latitude, self.longitude)
+    def __str__(self):
+        return (self.name)
 
 class Device(models.Model):
     location = models.ForeignKey(Location)
@@ -14,6 +15,6 @@ class Device(models.Model):
 
     devID = models.IntegerField()
 
-    def __unicode__(self):
-        return (u"$s - %s - %s" % self.name, self.devID, self.location)
+    def __str__(self):
+        return (self.name)
 
