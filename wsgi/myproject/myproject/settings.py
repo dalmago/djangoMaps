@@ -49,6 +49,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'map',
+    'react',
     'leaflet',
 )
 
@@ -114,6 +115,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(WSGI_DIR, 'static')
+STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static"),
+]
 
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER' : (-14.49, -54.1),
