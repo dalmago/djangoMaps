@@ -49,8 +49,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'map',
-    'react',
     'leaflet',
+    'react',
+    'bootstrap',
+    'bootstrap_ui',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -128,3 +130,6 @@ LEAFLET_CONFIG = {
     'SCALE' : 'metric',
     'ATTRIBUTION_PREFIX': 'Powered by Django!',
 }
+
+# django-bootstrap-ui settings
+DJANGO_BOOTSTRAP_UI_THEME = 'bootswatch-paper'

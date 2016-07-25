@@ -17,9 +17,11 @@ from django.conf.urls import include, url
 from django.contrib import admin
 import map.views
 import react.views
+import bootstrap.views
 
 urlpatterns = [
     url(r'^$', map.views.ind, name='index'),
     url(r'^react/', react.views.index, name="reactjs"),
+    url(r'^bootstrap/', bootstrap.views.index, name="reactjs"),
     url(r'^admin/', include(admin.site.urls)),
 ]

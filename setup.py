@@ -18,7 +18,8 @@ setup(
     # GETTING-STARTED: define required django version:
     install_requires=[
         'Django==1.8.4',
-        'django-leaflet==0.18.1'
+        'django-leaflet==0.18.1',
+        'django-bootstrap-ui==0.2.0',
     ],
     dependency_links=[
         'https://pypi.python.org/simple/django/'
