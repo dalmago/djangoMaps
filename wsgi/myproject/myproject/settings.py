@@ -51,8 +51,8 @@ INSTALLED_APPS = (
     'map',
     'leaflet',
     'react',
-    'bootstrap',
     'bootstrap_ui',
+    'bootstrap_app',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -83,6 +83,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
